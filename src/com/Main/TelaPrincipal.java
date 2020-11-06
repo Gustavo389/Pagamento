@@ -1,4 +1,9 @@
-package com.Classes;
+package com.Main;
+
+import com.Classes.EntradaSalario;
+import com.Classes.Saida;
+import com.Classes.TelaCadastro;
+import com.Classes.TelaLogin;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

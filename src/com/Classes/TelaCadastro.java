@@ -1,11 +1,8 @@
 package com.Classes;
 
 import javax.swing.*;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import static com.sun.glass.ui.Cursor.setVisible;
 
 public class TelaCadastro extends JInternalFrame {
     private JPanel panel1;
@@ -19,7 +16,7 @@ public class TelaCadastro extends JInternalFrame {
     private JLabel LblSenha;
     private JLabel LblSenha2;
 
-    TelaCadastro() {
+    public TelaCadastro() {
         setVisible(true);
         setSize(640, 480);
         setTitle("Cadastro");
@@ -33,13 +30,23 @@ public class TelaCadastro extends JInternalFrame {
         criarContaButton.addActionListener(new ActionListener() {
                                                @Override
                                                public void actionPerformed(ActionEvent e) {
-                                                   if (PwordSenha1.getPassword() == PwordSenha2Conf.getPassword()) {
+                                                    String senha1 = String.valueOf(PwordSenha1.getPassword());
+                                                    String senha2 = String.valueOf(PwordSenha2Conf.getPassword());
+                                                   if (senha1.equals(senha2)) {
                                                        System.out.println("Teste");
-                                                       Cadastro_LoginBDCache.setSolicitacao(Cadastro_LoginBDCache.solicitacao + 1);
-                                                       Cadastro_LoginBDCache.setEmail(TxtEmail.getText());
-                                                       Cadastro_LoginBDCache.setNomes(TxtNome.getText());
-                                                       Cadastro_LoginBDCache.setSenhas(PwordSenha1.getPassword());
+
+                                                       Cadastro_LoginBDCache.AddNome(TxtEmail.getText());
+                                                       Cadastro_LoginBDCache.AddEmails(TxtNome.getText());
+                                                       Cadastro_LoginBDCache.AddSenha(senha1);
                                                         JOptionPane.showMessageDialog(null,"Conta criada com sucesso");
+
+
+
+                                                   }else{
+                                                       System.out.println("N passou pelo if");
+                                                       System.out.println(PwordSenha1.getPassword());
+                                                       System.out.println(PwordSenha2Conf.getPassword());
+
                                                    }
                                                }
 

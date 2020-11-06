@@ -23,7 +23,7 @@
         </properties>
         <border type="none" title=""/>
         <children>
-          <component id="701c2" class="javax.swing.JTextField" binding="TxtUsuario">
+          <component id="701c2" class="javax.swing.JTextField" binding="TxtEmail">
             <constraints>
               <grid row="1" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -43,14 +43,14 @@
               <text value="Tela de Login"/>
             </properties>
           </component>
-          <component id="c6073" class="javax.swing.JLabel" binding="LblUsuario">
+          <component id="c6073" class="javax.swing.JLabel" binding="LblEmail">
             <constraints>
               <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-1"/>
               <foreground color="-16777216"/>
-              <text value="Usuário"/>
+              <text value="Email"/>
             </properties>
           </component>
           <component id="a9f2c" class="javax.swing.JLabel" binding="LblSenha">
