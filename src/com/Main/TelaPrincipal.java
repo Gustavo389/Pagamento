@@ -20,6 +20,7 @@ public class TelaPrincipal extends JFrame {
         desktopPane = new JDesktopPane();
         add(desktopPane);
         setVisible(true);
+        ShowGoodMessage(); // mensagem de bem-vindo
         criarMenus();
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
@@ -28,6 +29,9 @@ public class TelaPrincipal extends JFrame {
         new TelaPrincipal();
     }
 
+    void ShowGoodMessage() { // funcao de mensagem de bem-vindo
+        JOptionPane.showMessageDialog(null, "Bem Vindo Guerreiro!");
+    }
     void criarMenus() {
         JMenuBar barGuia = new JMenuBar();
         setJMenuBar(barGuia);
